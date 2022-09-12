@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         {% if user.is_authenticated %}
-                <p>{{ user.username }} Page scrappée Félicitation !! votre fichier csv à été téléchargé dans votre bureau!</p>
+                <p>{{ user.username }} Page scrappée Félicitation !!! votre fichier csv à été téléchargé dans votre bureau!</p>
                 <a href="{% url 'logout' %}">Déconnexion</a>
         {% else %}
          <p> Bienvenue  sur Veesion Scrap</p>

@@ -34,7 +34,7 @@ urlpatterns = [
     path('finish/', views.finish, name="finish"),
     path('signup/', signup, name="signup"),
     path('logout/', logout_user, name="logout"),
-    path('login/', login_user, name="login")
+    path('login/', login_user, name="login"),
 
     
 

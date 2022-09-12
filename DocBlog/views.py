@@ -96,7 +96,7 @@ def fonction2(request):
                             time.sleep(1) 
                         soup = BeautifulSoup(driver.page_source, 'html.parser')
                         stores = soup.find_all("li", class_="bi bi-generic") 
-                        for store in stores: 
+                        for store in stores:
                             try:
                                 nom = store.find("a", class_="bi-denomination pj-link").text.replace("\n", "").strip()
                             except:
