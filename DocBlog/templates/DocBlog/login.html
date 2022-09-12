@@ -1,0 +1,15 @@
+{% extends 'DocBlog/index.html' %}
+
+{% block content %}
+<h4>S'enregistrer ici</h4>
+<form method="post" action="/login">
+    {% csrf_token %}
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" placeholder="Entrer Votre pseudo" required>
+    <br>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Entrer Votre password" required>
+    <br>
+    <button type="submit">Enregistrer</button>
+</form>
+{% endblock %}

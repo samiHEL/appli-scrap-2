@@ -1,0 +1,29 @@
+<!-- Permet d'accéder aux fichiers statiques exemple CSS -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        {% if user.is_authenticated %}
+                <p>{{ user.username }} Page scrappée Félicitation !! votre fichier csv à été téléchargé dans votre bureau!</p>
+                <a href="{% url 'logout' %}">Déconnexion</a>
+        {% else %}
+         <p> Bienvenue  sur Veesion Scrap</p>
+         <a href="{% url 'login' %}">Connexion</a>
+         <a href="{% url 'signup' %}">S'inscrire</a>
+         {% endif %}
+            <center>{% block content %} 
+            {% endblock %}</center>
+     
+        
+    </div>
+    
+</body>
+</html>
